@@ -24,6 +24,7 @@ function Button(props) {
   );
 }
 // https://stackoverflow.com/questions/70570025/only-one-active-button-in-react
+// https://beta.reactjs.org/learn/sharing-state-between-components
 function Navbar() {
   return (
     <header className="p-4 bg-white shadow md:px-6 md:py-8 dark:bg-gray-900 flex items-center h-[80px] flex items-center justify-center">
