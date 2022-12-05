@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import Navbar from "./components/Navbar"; 
+import Navbar from "./components/Navbar";  
 import Footer from "./components/Footer";
 import {
   BrowserRouter as Router, 
@@ -25,7 +25,7 @@ function App() {
             <Route path="/search-jobs" element={<><SearchJobs /></>}/>
             <Route path="/search-workers" element={<><SearchWorkers /></>}/>
             <Route path="/account" element={<><Account /></>}/>
-          </Routes>  
+          </Routes>   
       </Router>
       <Footer />
   </div>;
