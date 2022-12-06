@@ -3,9 +3,7 @@ import { useState } from "react";
 function OfferJobs() {
   const [title, setTitle] = useState("");
   const handleSubmit = (e) => {
-    e.preventDefault();
-    const blog = { title };
-    console.log(blog);
+    e.preventDefault(); 
   };
   return (
     <section className="text-black bg-slate-700 w-full">
@@ -42,7 +40,7 @@ function OfferJobs() {
               />
             </div>
             <div>
-              <button className="hover:shadow-form rounded-md bg-[#6A64F1] py-3 px-8 text-base font-semibold text-white outline-none">
+              <button className="hover:ring hover:ring-orange-400 inline-block py-4 font-bold text-xl text-white bg-gray-800 px-7 hover:bg-gray-700 active:bg-gray-600 rounded-xl m-1">
                 Submit
               </button>
             </div>

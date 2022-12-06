@@ -2,9 +2,7 @@ import { useState } from "react";
 function OfferWorkers() {
   const [title, setTitle] = useState("");
   const handleSubmit = (e) => {
-    e.preventDefault();
-    const blog = { title };
-    console.log(blog);
+    e.preventDefault(); 
   };
   return (
     <section className="text-black bg-slate-700 w-full">

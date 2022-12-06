@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import React, { useState } from "react";
+import Hamburger from "./Hamburger";
 
-function Button() {
-
-  const inactiveButtonClasses = [
+function Buttons() {
+  const buttonClasses = [
     "inline-block",
     "py-4",
     "text-xl",
@@ -14,24 +14,15 @@ function Button() {
     "active:bg-gray-600",
     "rounded-xl",
     "m-1",
-    "focus:ring",
-    "focus:ring-orange-400",
-  ].join(" ");
+    "shrink-on-medium-screen"
+  ];
+
+  const inactiveButtonClasses = buttonClasses.join(" ");
 
   const activeButtonClasses = [
-    "inline-block",
-    "py-4",
-    "text-xl",
-    "text-white",
-    "bg-gray-800",
-    "px-7",
-    "hover:bg-gray-700",
-    "active:bg-gray-600",
-    "rounded-xl",
-    "m-1",
-    "focus:ring",
-    "focus:ring-orange-400",
-    "line-through",
+    ...buttonClasses,
+    "ring",
+    "ring-orange-400",
   ].join(" ");
 
   const buttonsText = [
@@ -57,7 +48,7 @@ function Button() {
 
   function toggleActive(index) {
     setActive({ ...activeBtn, activeObject: activeBtn.objects[index] });
-  };
+  }
 
   function toggleActiveStyles(index) {
     if (activeBtn.objects[index] === activeBtn.activeObject) {
@@ -65,7 +56,7 @@ function Button() {
     } else {
       return inactiveButtonClasses;
     }
-  };
+  }
 
   return (
     <>
@@ -94,9 +85,11 @@ function Navbar() {
           <span className="text-orange-400">Wb</span>.io
         </span>
       </Link>
-      <nav className="text-3xl font-bold text-center w-4/5">
-        <Button></Button>
-      </nav>
+      <nav className="text-3xl font-bold text-center w-4/5 hide-on-small-screen">
+        <Buttons></Buttons>
+      </nav> 
+      
+      <Hamburger></Hamburger>
     </header>
   );
 }
