@@ -135,24 +135,28 @@ a {
 }
 
 /* end of Hamburger menu */
-
-.content video {
+/* video overlay */
+.content .video {
   height: calc(100% - 90px) !important;
   width: 100%;
   object-fit: cover;
-  display: block;
+  display: block; 
+  
 }
 
-.content {
+.content { 
   position: relative;
   width: 100%;
   margin: 0 auto;
+  height: calc(100% - 90px) !important;
+  background-color: #06070a;
 }
 
 .content:before {
+  height: calc(100% - 90px) !important;
   content: "";
   position: absolute;
-  background: rgba(51, 65, 85, 0.5);
+  background: rgba(8, 10, 14, 0.7);
   border-radius: 5px;
   top: 0;
   right: 0;
@@ -168,7 +172,58 @@ a {
   top: 50%;
   transform: translate(-50%, -50%);
 }
-
-.h-nav-footer {
-  height: calc(100% - 90px) !important;
+/* end of video overlay */
+/* https://contactmentor.com/login-form-react-js-code/ */
+/* account sign in form */
+.app { 
+  display: flex; 
+  justify-content: center;  
 }
+
+.form input[type="text"],
+.form input[type="password"] {
+  height: 25px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  color: #282c34;
+}
+
+.form input[type="submit"] { 
+  cursor: pointer; 
+}
+
+.form input[type="submit"]:hover { 
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+}
+
+.login-form {
+  background-color: #121827;
+  color: white;
+  padding: 2rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.list-container {
+  display: flex;
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+}
+
+.title {
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 10px;
+}
+/* end of account sign in form */

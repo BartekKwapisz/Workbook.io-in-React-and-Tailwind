@@ -1,8 +1,8 @@
+import Form from "../components/Form";
+
 function SearchWorkers() {
-    return (
-        <section className="text-white bg-slate-700 w-full">
-            Search Workers
-        </section>
+    return ( 
+             <Form buttonText = "Search"></Form> 
     )
 }
 

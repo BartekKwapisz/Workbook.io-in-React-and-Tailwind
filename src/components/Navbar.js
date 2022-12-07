@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import React, { useState } from "react";
 import Hamburger from "./Hamburger";
 
-function Buttons() {
+function Navbar() {
   const buttonClasses = [
     "inline-block",
     "py-4",
@@ -14,7 +14,7 @@ function Buttons() {
     "active:bg-gray-600",
     "rounded-xl",
     "m-1",
-    "shrink-on-medium-screen"
+    "shrink-on-medium-screen",
   ];
 
   const inactiveButtonClasses = buttonClasses.join(" ");
@@ -60,37 +60,35 @@ function Buttons() {
 
   return (
     <>
-      {activeBtn.objects.map((elements, index) => (
-        <Link key={index} to={linkTo[index]}>
-          <button
-            key={index}
-            className={toggleActiveStyles(index)}
-            onClick={() => {
-              toggleActive(index);
-            }}
-          >
-            {buttonsText[index]}
-          </button>
-        </Link>
-      ))}
-    </>
-  );
-}
-
-function Navbar() {
-  return (
     <header className="p-4 bg-white shadow md:px-6 md:py-8 dark:bg-gray-900 flex items-center h-[80px] flex items-center justify-center">
       <Link to="/">
-        <span className="text-white text-center text-3xl w-1/5 font-bold">
+        <span
+          className="text-white text-center text-3xl w-1/5 font-bold"
+          onClick={() => {
+            toggleActive(null);
+          }}
+        >
           <span className="text-orange-400">Wb</span>.io
         </span>
       </Link>
       <nav className="text-3xl font-bold text-center w-4/5 hide-on-small-screen">
-        <Buttons></Buttons>
-      </nav> 
-      
+        {activeBtn.objects.map((elements, index) => (
+          <Link key={index} to={linkTo[index]}>
+            <button
+              key={index}
+              className={toggleActiveStyles(index)}
+              onClick={() => {
+                toggleActive(index);
+              }}
+            >
+              {buttonsText[index]}
+            </button>
+          </Link>
+        ))}{" "}
+      </nav>
       <Hamburger></Hamburger>
-    </header>
+      </header>
+    </>
   );
 }
 

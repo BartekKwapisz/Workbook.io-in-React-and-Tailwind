@@ -1,9 +1,10 @@
+import Form from "../components/Form";
+
+
 function SearchJobs() {
-    return (
-        <section className="text-white bg-slate-700 w-full">
-            Search Jobs
-        </section>
-    )
+  return (
+    <Form buttonText = "Search"></Form> 
+  );
 }
 
 export default SearchJobs;
