@@ -17,8 +17,8 @@ function Form(props){
               <input
                 type="text"
                 name="name"
-                id="name"
-                placeholder="title"
+                id="name1"
+                placeholder={props.placeholder1}
                 className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
                 value={title}
                 onChange={(e) => setTitle(e.target.value)}
@@ -28,17 +28,17 @@ function Form(props){
               <input
                 type="text"
                 name="name"
-                id="name"
-                placeholder="country"
+                id="name2"
+                placeholder={props.placeholder2}
                 className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
               />
             </div>
             <div className="mb-5">
               <input
-                type="text"
+                type={props.placeholder3 === "password" ? "password" : "text"}
                 name="name"
-                id="name"
-                placeholder="salary"
+                id="name3"
+                placeholder={props.placeholder3}
                 className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
               />
             </div>

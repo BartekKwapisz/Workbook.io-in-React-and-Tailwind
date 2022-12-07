@@ -2,7 +2,7 @@ import Form from "../components/Form";
 
 function OfferJobs() { 
   return (
-    <Form buttonText = "Submit"></Form> 
+    <Form buttonText = "Submit" placeholder1="title" placeholder2="country" placeholder3="salary"></Form> 
   );
 }
 
