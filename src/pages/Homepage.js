@@ -1,3 +1,6 @@
+import React from 'react'
+import videoBg from '../img/video.mp4'
+
 function Homepage() {
   return (
     <>
@@ -6,8 +9,7 @@ function Homepage() {
                     <p className="text-orange-500 font-extrabold">Workbook<span className="text-white">.io</span></p>
                     <p className="text-white text-3xl">Connects employment agencies with employers</p>
             </div>
-          <video autoPlay disablePictureInPicture muted loop className="video">
-            <source src={require("../img/video.mp4")} type="video/mp4"></source>
+          <video src={videoBg} autoPlay disablePictureInPicture muted loop className="video"> 
           </video>
          
       </section>
